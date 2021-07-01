@@ -4,12 +4,12 @@
 build/
 dist*/
 /venv*/
-/kgs/
 /.tox/
-/releases/
+/releases*/
+/log*
 letsencrypt.log
 certbot.log
-letsencrypt-auto-source/letsencrypt-auto.sig.lzma.base64
+poetry.lock
 
 # coverage
 .coverage
@@ -25,19 +25,36 @@ tags
 \#*#
 .idea
 .ropeproject
+.vscode
 
 # auth --cert-path --chain-path
 /*.pem
-
-# letstest
-tests/letstest/letest-*/
-tests/letstest/*.pem
-tests/letstest/venv/
 
 .venv
 
 # pytest cache
 .cache
+.mypy_cache/
+.pytest_cache/
 
 # docker files
 .docker
+
+# certbot tests
+.certbot_test_workspace
+**/assets/pebble*
+**/assets/challtestsrv*
+
+# snap files
+.snapcraft
+parts
+prime
+stage
+*.snap
+snap-constraints.txt
+qemu-*
+certbot-dns*/certbot-dns*_amd64*.txt
+certbot-dns*/certbot-dns*_arm*.txt
+/certbot_amd64*.txt
+/certbot_arm*.txt
+certbot-dns*/snap
